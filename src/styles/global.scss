@@ -1,0 +1,16 @@
+@use "vars" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=IBM+Plex+Mono:wght@600&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $accent;
+    color: $white;
+
+    font-family: "Comfortaa", sans-serif;
+}

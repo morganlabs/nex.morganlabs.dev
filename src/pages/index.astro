@@ -1,9 +1,69 @@
 ---
+import { Icon } from "astro-icon/components";
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="ProjectNex | Under Construction">
-	<main>
-        <h1>This page is under construction</h1>
+	<main class="container">
+        <div class="centred">
+            <span class="kicker">Under Construction</span>
+            <h1 class="logo">nex</h1>
+            <div class="social-icon">
+                <a href="https://www.instagram.com/hello.nex/" target="_blank" class="social-icon"><Icon name="mdi:instagram" /></a>
+                <a href="https://twitter.com/Hello_Nex" target="_blank" class="social-icon"><Icon name="mdi:twitter" /></a>
+            </div>
+        </div>
+        <span class="go-to-main">Go to <a href="https://morganlabs.dev">morganlabs.dev</a></span>
 	</main>
 </Layout>
+
+<style lang="scss">
+.container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.centred {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    font-size: 10rem;
+    line-height: 1em;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.social-icon {
+    color: $white;
+    opacity: 0.75;
+    font-size: 2rem;
+    transition: opacity 0.25s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.kicker, .go-to-main {
+    font-family: "IBM Plex Mono", monospace;
+    text-transform: uppercase;
+    
+    * {
+        color: $white;
+    }
+}
+
+.go-to-main {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.75;
+    text-align: center;
+}
+</style>
